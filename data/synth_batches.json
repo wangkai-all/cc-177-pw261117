@@ -1,0 +1,283 @@
+{
+  "batches": [
+    {
+      "batch_id": "B-A1",
+      "items": [
+        {
+          "entity_type": "order_line",
+          "line_id": "L-A1",
+          "order_id": "O-A",
+          "sku": "SKU-1",
+          "qty": 2,
+          "amount": 199.0,
+          "version": 1
+        },
+        {
+          "entity_type": "payment",
+          "payment_id": "P-A1",
+          "order_id": "O-A",
+          "method": "CARD",
+          "amount": 199.0,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-A2",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-A",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C001"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-B1",
+      "items": [
+        {
+          "entity_type": "order_line",
+          "line_id": "L-B1",
+          "order_id": "O-B",
+          "sku": "SKU-2",
+          "qty": 1,
+          "amount": 88.0,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-B2",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-B",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C002"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-C1",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-C",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C003"
+        },
+        {
+          "entity_type": "order_line",
+          "line_id": "L-C1",
+          "order_id": "O-C",
+          "sku": "SKU-3",
+          "qty": 1,
+          "amount": 50.0,
+          "version": 1
+        },
+        {
+          "entity_type": "order_line",
+          "line_id": "L-C2",
+          "order_id": "O-C",
+          "sku": "SKU-4",
+          "qty": 3,
+          "amount": 20.0,
+          "version": 1
+        },
+        {
+          "entity_type": "payment",
+          "payment_id": "P-C1",
+          "order_id": "O-C",
+          "method": "ALIPAY",
+          "amount": 110.0,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-C2",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-C",
+          "op": "CANCEL",
+          "version": 2,
+          "reason": "客户撤单"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-D1",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-D",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C004"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-D2",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-D",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C004"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-E1",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-E",
+          "op": "CANCEL",
+          "version": 1,
+          "reason": "风控拦截"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-E2",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-E",
+          "op": "CREATE",
+          "version": 2,
+          "customer": "C005"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-E3",
+      "items": [
+        {
+          "entity_type": "order_line",
+          "line_id": "L-E1",
+          "order_id": "O-E",
+          "sku": "SKU-5",
+          "qty": 1,
+          "amount": 9.9,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-F1",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-F",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C006"
+        }
+      ]
+    },
+    {
+      "batch_id": "B-F2",
+      "items": [
+        {
+          "entity_type": "order_line",
+          "line_id": "L-F1",
+          "order_id": "O-F",
+          "sku": "SKU-6",
+          "qty": 1,
+          "amount": 12.0,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-F3",
+      "items": [
+        {
+          "entity_type": "order_line",
+          "line_id": "L-F2",
+          "order_id": "O-F",
+          "sku": "SKU-7",
+          "qty": 2,
+          "amount": 30.0,
+          "version": 1
+        },
+        {
+          "entity_type": "payment",
+          "payment_id": "P-F1",
+          "order_id": "O-F",
+          "method": "CARD",
+          "amount": 72.0,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "batch_id": "B-G1",
+      "items": [
+        {
+          "entity_type": "order",
+          "order_id": "O-G",
+          "op": "CREATE",
+          "version": 1,
+          "customer": "C007"
+        },
+        {
+          "entity_type": "order_line",
+          "line_id": "L-G1",
+          "order_id": "O-G",
+          "sku": "SKU-8",
+          "qty": 5,
+          "amount": 8.0,
+          "version": 1
+        },
+        {
+          "entity_type": "payment",
+          "payment_id": "P-G1",
+          "order_id": "O-G",
+          "method": "CASH",
+          "amount": 40.0,
+          "version": 1
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "key": "A",
+      "title": "乱序补关联"
+    },
+    {
+      "key": "B",
+      "title": "超时异常与恢复"
+    },
+    {
+      "key": "C",
+      "title": "发布后撤销"
+    },
+    {
+      "key": "D",
+      "title": "重复投递幂等"
+    },
+    {
+      "key": "E",
+      "title": "先撤销后创建"
+    },
+    {
+      "key": "F",
+      "title": "增量发布不重复"
+    },
+    {
+      "key": "G",
+      "title": "同批混合实体"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>入仓工作台 · 乱序批次关联</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>入仓工作台</h1>
+    <p class="subtitle">订单 / 订单行 / 付款分批到达 · 等待区补关联 · 超时异常 · 有来源撤销 · 发布血缘</p>
+  </div>
+  <div class="toolbar">
+    <button id="btn-shuffle" class="primary">乱序发送全部合成批次</button>
+    <button id="btn-sweep">超时扫描 <span class="hint">(可快进)</span></button>
+    <input id="ff-seconds" type="number" value="400" min="0" title="模拟快进秒数">
+    <button id="btn-publish" class="accent">发布</button>
+    <button id="btn-reset" class="danger">重置数据</button>
+  </div>
+</header>
+
+<section id="stats" class="stats"></section>
+
+<div class="tabs">
+  <button class="tab active" data-tab="batches">原始批次</button>
+  <button class="tab" data-tab="waiting">等待区 / 异常</button>
+  <button class="tab" data-tab="orders">订单</button>
+  <button class="tab" data-tab="lines">订单行</button>
+  <button class="tab" data-tab="payments">付款</button>
+  <button class="tab" data-tab="reversals">撤销结果</button>
+  <button class="tab" data-tab="published">发布查询</button>
+  <button class="tab" data-tab="send">手工发送批次</button>
+</div>
+
+<main>
+  <section id="tab-batches" class="panel active"></section>
+  <section id="tab-waiting" class="panel"></section>
+  <section id="tab-orders" class="panel"></section>
+  <section id="tab-lines" class="panel"></section>
+  <section id="tab-payments" class="panel"></section>
+  <section id="tab-reversals" class="panel"></section>
+  <section id="tab-published" class="panel"></section>
+  <section id="tab-send" class="panel">
+    <h2>手工发送一个批次</h2>
+    <p class="hint">批次号相同视为重复投递; 同一 (实体, ID, 版本) 不会重复计入。</p>
+    <label>批次号 <input id="manual-batch-id" placeholder="B-MANUAL-1"></label>
+    <textarea id="manual-items" rows="10" placeholder='[
+  {"entity_type": "order_line", "line_id": "L-X1", "order_id": "O-X",
+   "sku": "SKU-9", "qty": 1, "amount": 10.0, "version": 1}
+]'></textarea>
+    <button id="btn-send-manual" class="primary">发送批次</button>
+    <pre id="manual-result" class="result-box"></pre>
+  </section>
+</main>
+
+<div id="drawer" class="drawer hidden">
+  <div class="drawer-head">
+    <h2 id="drawer-title">血缘</h2>
+    <button id="drawer-close">✕</button>
+  </div>
+  <div id="drawer-body"></div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
